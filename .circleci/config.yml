@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  aws-code-deploy: circleci/aws-code-deploy@0.0.10
+workflows:
+  deploy_application:
+    jobs:
+      - aws-code-deploy/deploy:
+          application-name: Python
+          deployment-group: PythonDeploy
+          service-role-arn: arn:aws:iam::801391952744:role/CodeDeployDemo-EC2-Instance-Profile
+          bundle-bucket: angular-bucket-17
+          bundle-source: build/
+          bundle-key: hello
+       
