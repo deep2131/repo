@@ -5,10 +5,10 @@ workflows:
   deploy_application:
     jobs:
       - aws-code-deploy/deploy:
-          application-name: Python
-          deployment-group: PythonDeploy
+          application-name: myapp
+          deployment-group: myappdeploy
           service-role-arn: arn:aws:iam::922406282291:role/CodeDeployServiceRole
-          bundle-bucket: angular-s3-bucket
-          bundle-source: build/
-          bundle-key: hello
+          bundle-bucket: python-s3-bucket
+          bundle-source: build
+          bundle-key: name
        
