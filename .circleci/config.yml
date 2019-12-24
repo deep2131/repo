@@ -6,7 +6,7 @@ workflows:
     jobs:
       - aws-code-deploy/deploy:
           application-name: myapp
-          deployment-group: myappdeploy
+          deployment-group: deploycode
           service-role-arn: arn:aws:iam::922406282291:role/CodeDeployServiceRole
           bundle-bucket: python-s3-bucket
           bundle-source: build
