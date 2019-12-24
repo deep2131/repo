@@ -7,8 +7,8 @@ workflows:
       - aws-code-deploy/deploy:
           application-name: Python
           deployment-group: PythonDeploy
-          service-role-arn: arn:aws:iam::801391952744:role/CodeDeployServiceRole-new
-          bundle-bucket: angular-bucket-17
+          service-role-arn: arn:aws:iam::922406282291:role/CodeDeployServiceRole
+          bundle-bucket: angular-s3-bucket
           bundle-source: build/
           bundle-key: hello
        
